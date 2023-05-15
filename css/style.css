@@ -13,10 +13,10 @@ body {
     background-color: white;
 }
 
-  
+  /* THIS IS WHERE THE HEADER BEGINS */
   header {
     position: relative;
-    height: 275px; /* Set the desired height */
+    height: 275px;
     overflow: visible;
   }
   
@@ -49,7 +49,7 @@ body {
   }
   
   .logo img {
-    width: 100px; /* Adjust the size as needed */
+    width: 100px;
     height: auto;
   }
   
