@@ -45,5 +45,22 @@ body{
 }
 
 .line{
-    
+    margin:0%;
+    line-height: 100%;
+
+}
+
+.container{
+    display: flex;
+}
+
+.form{
+    flex: 1;
+    border: 2px solid blueviolet;
+    margin-right: 20px;
+}
+
+.FAQ{
+    display: block;
+    border: 2px dashed green;
 }
