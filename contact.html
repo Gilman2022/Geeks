@@ -1,99 +1,199 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <title>Github Group Project</title>
+    <title>Prince Edward School - Celebrating 125 Years!</title>
+    <link rel="icon" href="/img/crest.jpg">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="javascript" href="/js/main.js">
+    <script src="https://kit.fontawesome.com/89a9f31f01.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <h1>THIS IS THE HEADER?
-            <!-- ALYSHA HEADER/FOOTER? -->
-        </h1>
-    </header>
-    <div class="contact">
-        <div class="title">
-            <h1>Contact Us</h1>
-            <p>It's our pleasure to serve you.</p>
-        </div>
-        <span><img class="crest" src="img/crest.jpg" alt="Crest of Prince Edwards School for Boys in Harare, Zimbabwe" width="110px"></span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aperiam impedit facilis reiciendis neque praesentium saepe quia? Ipsum quidem, modi beatae doloremque eius dolorem earum id. Nisi recusandae facere porro.</p>
+  <!--THIS IS THE CODE FOR THE HEADER-->
+  <header>
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="/img/bg-video.mp4" type="video/mp4">
+      </video>
     </div>
-    <hr class="line">
-    <div>
-        <img src="img/login-logo.svg" alt="person icon" width="22px">
-        <p><a href="_blank">Log in</a> to auto-complete the form below.</p>
+    
+    <div class="header-content">
+      
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">MENU</button>
+            <div class="dropdown-content" style="left:0;">
+                <a class="nav home" href="#">HOME</a>
+                <a class="nav about" href=".about">ABOUT US</a>
+                <a class="nav academics" href=".academics">ACADEMICS</a>
+                <a class="nav sports" href=".sports">SPORTS</a>
+                <a class="nav contact" href="">CONTACT</a>
+                <a class="nav portal" href=".portal">PORTAL</a>
+            </div>
+          </div>
+      </nav>
+
+      <div class="logo">
+        <img src="/img/LOGO-final-noFLAG.png" alt="School Logo">
+      </div>
     </div>
+  </header>
+  <section class="ftco-section">
     <div class="container">
-        <div class="form">
-            <form action="http://www.example.com/example.htm" method="post">
-                <select name="selection" id="selection">
-                    <!-- <label>Title</label> -->
-                    <option value=""></option>
-                    <option value="Dr.">Dr.</option>
-                    <option value="Mr.">Mr.</option>
-                    <option value="Mrs.">Mrs.</option>
-                    <option value="Ms.">Ms.</option>
-                </select>
-                <!-- title placeholder sitting above field after active/click -->
-  
-                <input type="text" id="Name" name="Name" placeholder="First Name*" required>
-                <!-- <label>First Name</label> -->
-                <input type="text" id="Name" name="Name" placeholder="Last Name*" required>
-                <!-- <label>Last Name</label> -->
-                <input type="text" id="name" name="Name" placeholder="Zip Code*"required>
-                <!-- <label>Zip Code</label> -->
-                <!-- <hr> -->
-                <input type="text" id="name" name="Name" placeholder="Preferred Contact Method*"required>
-                <!-- <label>Preferred Contact Method</label> -->
-                <input type="text" id="name" name="Name" placeholder="Subject Type*"required>
-                <!-- <label>Subject Type</label> -->
-                <input type="text" id="name" name="Name" placeholder="Subject Context*"required>
-                <!-- <label>Subject Context</label> -->
-                <input type="text" id="name" name="Name" placeholder="Additional Info (optional)">
-                <!-- <label>Additional Info (optional)</label> -->
-                <textarea placeholder="Message*"required></textarea>
-                <button value="Submit">Submit</button>
-            </form>
+        <div class="row justify-content-center">
+            
         </div>
-        <div class="FAQ">
-            <h1>FAQ</h1>
-            <div>
-                <aside>
-                    <details>
-                        <summary>
-                       What is the Prince Edwards School?
-                        </summary>
-                        <p>Here is the answer.</p>
-                    </details>
-                  </aside>
-                  <details>
-                    <summary>
-                   What is the Prince Edwards School?
-                    </summary>
-                    <p>Here is the answer.</p>
-                </details>
-                <details>
-                    <summary>
-                   Where is the Prince Edwards School?
-                    </summary>
-                    <p>Here is the answer.</p>
-                </details>
-                <details>
-                    <summary>
-                   When is the Prince Edwards School open?
-                    </summary>
-                    <p>Here is the answer.</p>
-                </details>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters mb-5">
+                        <div class="col-md-7">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <h3 class="mb-4">Contact Us</h3>
+                                <div id="form-message-warning" class="mb-4"></div> 
+                          <div id="form-message-success" class="mb-4">
+                        Your message was sent, thank you!
+                          </div>
+                                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="name">Full Name</label>
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="form-group">
+                                                <label class="label" for="email">Email Address</label>
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="subject">Subject</label>
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="#">Message</label>
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-stretch">
+                            <div id="map">
+                                <!-- <img class="" src="img/bagpipes.jpg" alt="rugby" width="400px"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-map-marker"></span>
+                        </div>
+                        <div class="text">
+                        <p class=""><span>Address:</span> 52HM+JX8, Harare, Zimbabwe</p>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-phone"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Phone:</span> <a href="tel://263 24 2792240">+263 24 2792240</a></p>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-paper-plane"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-globe"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                      </div>
+                  </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-   
+</section>
+
+<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
 
 
+
+<!--This is the code for the footer-->
+<footer>
+  <a href="#" class="back-to-top" title="Back to Top!"><i class="fa-solid fa-circle-up fa-lg" style="color: #86041e;"></i></a>
+  
+  <script src="script.js"></script>
+  <div class="footer-content">
+      <h3 class="head-font">We aim to...</h3>
+      <p class="para-text">deliver an exceptional and rigorous education in an optimal setting, fostering a purposeful and nurturing environment for academically talented young men from diverse and extensive backgrounds. We cultivate their utmost potential, instilling in them a discerning approach to learning, a constructive outlook on society, and equipping them with the skills necessary to thrive throughout their lifelong journey of personal growth.</p>
+      <ul class="socials">
+          <li><a href="https://www.facebook.com/peschoolzw"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/Tigers1898"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCjgWEJAN-9gAilc2mTUic7A"><i class="fa fa-youtube"></i></a></li>
+      </ul>
+  </div>
+
+
+
+
+  <div class="footer-bottom">
+      <p>copyright &copy; <a href="#">Geeks Inc.</a>  </p>
+              <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a class="foot home" href="#">HOME</a></li>
+                    <li><a class="foot about" href=".about">ABOUT US</a></li>
+                    <li><a class="foot academics" href=".academics">ACADEMICS</a></li>
+                    <li><a class="foot sports" href=".sports">SPORTS</a></li>
+                    <li><a class="foot contact" href=".contact">CONTACT</a></li>
+                    <li><a class="foot portal" href=".portal">PORTAL</a></li>
+                </ul>
+              </div>
+  </div>
+
+
+</footer>
 
 </body>
 </html>
